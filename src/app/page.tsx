@@ -264,7 +264,7 @@ export default function Home() {
         </motion.section>
 
         {/* Video Section */}
-        <motion.section
+        {/* <motion.section
           ref={(el) => {
             sectionsRef.current[3] = el as HTMLDivElement;
           }}
@@ -279,9 +279,27 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <VideoSection />
-        </motion.section>
+        </motion.section> */}
 
         {/* Timeline Section */}
+        <motion.section
+          ref={(el) => {
+            sectionsRef.current[3] = el as HTMLDivElement;
+          }}
+          className="relative min-h-screen flex items-center justify-center py-20"
+          style={{
+            y: sectionTransforms[2],
+          }}
+          animate={{
+            opacity: visibleSections[3] ? 1 : 0.6,
+            scale: visibleSections[3] ? 1 : 0.95,
+          }}
+          transition={{ duration: 0.8 }}
+        >
+          <TimelineSection />
+        </motion.section>
+
+        {/* Gift Section */}
         <motion.section
           ref={(el) => {
             sectionsRef.current[4] = el as HTMLDivElement;
@@ -296,28 +314,28 @@ export default function Home() {
           }}
           transition={{ duration: 0.8 }}
         >
-          <TimelineSection />
-        </motion.section>
-
-        {/* Gift Section */}
-        <motion.section
-          ref={(el) => {
-            sectionsRef.current[5] = el as HTMLDivElement;
-          }}
-          className="relative min-h-screen flex items-center justify-center py-20"
-          style={{
-            y: sectionTransforms[4],
-          }}
-          animate={{
-            opacity: visibleSections[5] ? 1 : 0.6,
-            scale: visibleSections[5] ? 1 : 0.95,
-          }}
-          transition={{ duration: 0.8 }}
-        >
           <GiftSection />
         </motion.section>
 
         {/* Quotes Section */}
+        <motion.section
+          ref={(el) => {
+            sectionsRef.current[6] = el as HTMLDivElement;
+          }}
+          className="relative min-h-screen flex items-center justify-center py-20"
+          style={{
+            y: sectionTransforms[5],
+          }}
+          animate={{
+            opacity: visibleSections[6] ? 1 : 0.6,
+            scale: visibleSections[6] ? 1 : 0.95,
+          }}
+          transition={{ duration: 0.8 }}
+        >
+          <QuotesSection />
+        </motion.section>
+
+        {/* Outro Section */}
         <motion.section
           ref={(el) => {
             sectionsRef.current[7] = el as HTMLDivElement;
@@ -329,24 +347,6 @@ export default function Home() {
           animate={{
             opacity: visibleSections[7] ? 1 : 0.6,
             scale: visibleSections[7] ? 1 : 0.95,
-          }}
-          transition={{ duration: 0.8 }}
-        >
-          <QuotesSection />
-        </motion.section>
-
-        {/* Outro Section */}
-        <motion.section
-          ref={(el) => {
-            sectionsRef.current[8] = el as HTMLDivElement;
-          }}
-          className="relative min-h-screen flex items-center justify-center py-20"
-          style={{
-            y: sectionTransforms[7],
-          }}
-          animate={{
-            opacity: visibleSections[8] ? 1 : 0.6,
-            scale: visibleSections[8] ? 1 : 0.95,
           }}
           transition={{ duration: 0.8 }}
         >
